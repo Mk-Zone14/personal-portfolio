@@ -41,9 +41,6 @@ export const ContextSection = () => {
           <span className="sequence-item">Biology</span>
           <span className="sequence-item hidden md:inline">→</span>
           <span className="sequence-item md:hidden">↓</span>
-          <span className="sequence-item">Medicine</span>
-          <span className="sequence-item hidden md:inline">→</span>
-          <span className="sequence-item md:hidden">↓</span>
           <span className="sequence-item">Computer Science</span>
           <span className="sequence-item hidden md:inline">→</span>
           <span className="sequence-item md:hidden">↓</span>
@@ -54,7 +51,7 @@ export const ContextSection = () => {
         </div>
 
         <div className="mt-24 max-w-2xl text-lg md:text-2xl font-light leading-relaxed text-background/90 text-balance">
-          My path wasn't linear. It started with a fascination for organic systems and medicine, which eventually evolved into a deep curiosity about artificial systems, computation, and intelligence. The transition was driven by a desire to build, solve complex problems, and understand how intricate systems work at scale.
+          My path wasn't linear. It started with a fascination for organic systems, which eventually evolved into a deep curiosity about artificial systems, computation, and intelligence. The transition was driven by a desire to build, solve complex problems, and understand how intricate systems work at scale.
         </div>
       </div>
     </section>
