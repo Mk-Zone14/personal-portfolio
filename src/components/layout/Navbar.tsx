@@ -2,7 +2,7 @@
 
 export const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 mix-blend-difference px-6 py-8 flex justify-between items-center text-white">
+    <nav className="fixed top-0 left-0 w-full z-50 mix-blend-difference px-6 py-6 md:py-8 flex justify-between items-center text-white isolate">
       <div className="font-display text-sm tracking-widest uppercase font-medium">
         Medha
       </div>

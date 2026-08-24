@@ -1,32 +1,36 @@
-# React + TypeScript + Vite
+# Medhashree Kallol — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio showcasing projects and experiments at the intersection of AI/ML, software development, and creative technology.
 
-Currently, two official plugins are available:
+**Live Demo:** [personal-portfolio-bice-sigma.vercel.app](https://personal-portfolio-bice-sigma.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Architecture & Technology
 
-## React Compiler
+This portfolio is built with a focus on performance, minimal friction, and a strong editorial aesthetic.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React + Vite
+- **Styling:** Tailwind CSS (customized for an editorial aesthetic)
+- **Animation:** GSAP (GreenSock) for scroll triggers and complex sequencing
+- **Typography:** Space Grotesk (display) & Inter (body)
+- **Deployment:** Vercel
 
-## Expanding the Oxlint configuration
+## Design Philosophy
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+The visual language is restrained, utilizing a dark/light alternating section structure to guide the user's eye. It relies heavily on:
+- Asymmetric 12-column grid layouts
+- Large negative space and high contrast
+- Oversized typography
+- Subtle micro-interactions instead of overwhelming animations
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+## Local Setup
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
+4. Build for production: `npm run build`
+
+## Author
+
+**Medhashree Kallol**
+- [LinkedIn](https://www.linkedin.com/in/medhashree-kallol-2878a2334/)
+- Email: medhashreekallol14@gmail.com

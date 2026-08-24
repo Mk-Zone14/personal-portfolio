@@ -31,7 +31,7 @@ export const ContextSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about" className="min-h-screen py-32 px-6 bg-foreground text-background flex flex-col justify-center">
+    <section ref={sectionRef} id="context" className="min-h-screen pt-36 pb-24 md:pt-44 md:pb-32 px-6 bg-foreground text-background flex flex-col justify-center">
       <div className="max-w-[90vw] mx-auto w-full">
         <h2 className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight mb-24">
           A Little Context.

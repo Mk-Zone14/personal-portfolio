@@ -15,7 +15,7 @@ export const ThinkingSection = () => {
   const [activeTopic, setActiveTopic] = useState(topics[0]);
 
   return (
-    <section id="think" className="min-h-screen bg-foreground text-background py-32 px-6 flex flex-col justify-center">
+    <section id="think" className="min-h-screen bg-foreground text-background pt-36 pb-24 md:pt-44 md:pb-32 px-6 flex flex-col justify-center">
       <div className="max-w-[90vw] mx-auto w-full">
         <h2 className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight mb-24 max-w-4xl">
           Things I'm<br />Thinking About.

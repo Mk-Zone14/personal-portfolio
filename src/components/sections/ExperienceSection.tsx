@@ -2,7 +2,7 @@
 
 export const ExperienceSection = () => {
   return (
-    <section className="py-32 bg-background text-foreground px-6 border-t border-muted/10">
+    <section className="pt-48 pb-32 md:pt-56 bg-background text-foreground px-6 border-t border-muted/10">
       <div className="max-w-[90vw] mx-auto w-full">
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-24">

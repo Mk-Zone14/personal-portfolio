@@ -2,7 +2,7 @@
 
 export const CreativeSection = () => {
   return (
-    <section className="min-h-screen bg-background text-foreground flex flex-col justify-center py-32 px-6">
+    <section className="min-h-screen bg-background text-foreground flex flex-col justify-center pt-36 pb-24 md:pt-44 md:pb-32 px-6">
       <div className="max-w-[90vw] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-5 flex flex-col justify-between">
           <div>
@@ -27,10 +27,7 @@ export const CreativeSection = () => {
         </div>
 
         <div className="col-span-1 lg:col-span-7 relative h-[60vh] lg:h-full min-h-[400px] flex items-center justify-center bg-[#111] border border-muted/20 overflow-hidden group">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30 group-hover:opacity-50 transition-opacity duration-1000 grayscale"></div>
-          <div className="relative z-10 flex items-center justify-center w-24 h-24 rounded-full border border-accent/50 backdrop-blur-sm cursor-pointer hover:bg-accent hover:text-background transition-colors duration-500">
-            <span className="font-sans text-xs tracking-widest uppercase font-medium">Play</span>
-          </div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-1000 grayscale"></div>
         </div>
       </div>
     </section>

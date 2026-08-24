@@ -6,10 +6,16 @@
   :root {
     --background: #0a0a0a;
     --foreground: #f5f5f0;
+    font-synthesis: none;
+    -webkit-font-synthesis: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     @apply bg-background text-foreground antialiased;
+    font-synthesis: none;
+    -webkit-font-synthesis: none;
     /* Lenis smooth scrolling requirement */
     width: 100%;
     min-height: 100%;

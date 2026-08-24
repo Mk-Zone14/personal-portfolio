@@ -42,14 +42,14 @@ export const Interests = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="py-32 bg-foreground text-background overflow-hidden flex flex-col justify-center min-h-screen">
-      <div className="px-6 mb-16 max-w-[90vw] mx-auto w-full">
-        <h2 className="font-sans text-sm tracking-[0.2em] uppercase font-bold text-background/50">
+    <section ref={containerRef} className="relative z-20 pt-44 pb-32 md:pt-52 md:pb-40 bg-foreground text-background overflow-hidden min-h-screen flex flex-col justify-center">
+      <div className="px-6 mb-12 md:mb-16 max-w-[90vw] mx-auto w-full">
+        <h2 className="font-sans text-sm tracking-[0.2em] uppercase font-bold text-background/60">
           Currently Obsessed With
         </h2>
       </div>
 
-      <div className="flex flex-col gap-2 md:gap-4 whitespace-nowrap opacity-90 select-none">
+      <div className="flex flex-col gap-3 md:gap-6 whitespace-nowrap select-none mt-4 md:mt-8">
         {interests.map((interest, idx) => (
           <div 
             key={idx} 
@@ -57,7 +57,10 @@ export const Interests = () => {
           >
             {[...Array(4)].map((_, i) => (
               <Fragment key={i}>
-                <span className={`font-display font-bold text-6xl md:text-[8vw] leading-none tracking-tighter uppercase ${i % 2 !== 0 ? 'text-transparent' : ''}`} style={{ WebkitTextStroke: i % 2 !== 0 ? '1px var(--background)' : 'none' }}>
+                <span 
+                  className={`font-display font-bold text-5xl md:text-[7vw] leading-none tracking-tight uppercase ${i % 2 !== 0 ? 'text-foreground opacity-20' : 'text-background'}`}
+                  style={{ WebkitTextStroke: i % 2 !== 0 ? '1px #0a0a0a' : 'none' }}
+                >
                   {interest}
                 </span>
                 <span className="font-sans text-xl md:text-3xl font-light text-background/30">✦</span>

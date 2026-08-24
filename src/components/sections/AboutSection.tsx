@@ -2,7 +2,7 @@
 
 export const AboutSection = () => {
   return (
-    <section className="py-32 bg-background text-foreground px-6 border-t border-muted/10">
+    <section id="about" className="pt-36 pb-24 md:pt-44 md:pb-32 bg-background text-foreground px-6 border-t border-muted/10">
       <div className="max-w-[90vw] mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-16">
         <div className="md:col-span-4">
           <h3 className="font-display text-2xl uppercase tracking-tight">About</h3>

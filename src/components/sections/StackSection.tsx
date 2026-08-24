@@ -5,7 +5,7 @@ const currentlyLearning = ['Computer Science fundamentals', 'Data Structures & A
 
 export const StackSection = () => {
   return (
-    <section className="py-32 bg-background text-foreground px-6">
+    <section className="pt-36 pb-24 md:pt-44 md:pb-32 bg-background text-foreground px-6">
       <div className="max-w-[90vw] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-24">
         <div>
           <h3 className="font-sans text-xs tracking-widest uppercase text-muted mb-12 border-b border-muted/20 pb-4">

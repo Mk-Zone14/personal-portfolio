@@ -30,7 +30,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden pt-20">
+    <section ref={containerRef} className="relative min-h-screen flex flex-col justify-center px-6 overflow-hidden pt-32 md:pt-40">
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at center, white 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
       
       <div className="z-10 w-full max-w-[90vw] mx-auto flex flex-col justify-center h-full">
