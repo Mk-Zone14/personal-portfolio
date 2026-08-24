@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     title: 'NOVA',
-    category: 'AI Application',
+    category: 'Featured Work',
     description: 'An AI-powered opportunity and application copilot that assists in finding and applying for roles at scale.',
     tech: ['React', 'Vite', 'Tailwind', 'AI APIs'],
     link: 'https://nova-ai-delta-five.vercel.app/',
@@ -16,20 +16,44 @@ const projects = [
     color: 'bg-[#121212]'
   },
   {
+    title: 'FINORA',
+    category: 'Featured Work / Team Project',
+    description: 'Gemini Hackathon 3rd Place Winner. Contribution: Presentation & Product Storytelling.',
+    tech: ['Presentation', 'Product Storytelling'],
+    number: '02',
+    color: 'bg-[#151515]'
+  },
+  {
     title: 'SPENDWISE',
-    category: 'FinTech',
+    category: 'Featured Work',
     description: 'A student-focused personal expense tracking application designed for minimal friction and clear financial visibility.',
     tech: ['React', 'Vite', 'Tailwind'],
-    number: '02',
+    number: '03',
     color: 'bg-[#181818]'
   },
   {
-    title: 'PLANETARY ROVER',
-    category: 'Edge-AI & Robotics',
-    description: 'An Edge-AI visual terrain analysis and autonomous mapping concept for planetary exploration. Focuses on terrain segmentation, visual SLAM, and hazard detection.',
-    tech: ['Computer Vision', 'Visual SLAM', 'Python'],
-    number: '03',
+    title: 'Credit Card Default Prediction',
+    category: 'Machine Learning',
+    description: 'Predictive model analyzing financial data to assess credit card default probabilities.',
+    tech: ['Python', 'Scikit-learn', 'Pandas'],
+    number: '04',
     color: 'bg-[#1a1a1a]'
+  },
+  {
+    title: 'Titanic Survival Prediction',
+    category: 'Machine Learning',
+    description: 'Classification model predicting survival on the Titanic dataset.',
+    tech: ['Python', 'Machine Learning', 'Data Analysis'],
+    number: '05',
+    color: 'bg-[#1c1c1c]'
+  },
+  {
+    title: 'Python Mini Projects',
+    category: 'Creative Computing',
+    description: 'A collection of creative python mini-projects and scripts.',
+    tech: ['Python'],
+    number: '06',
+    color: 'bg-[#1e1e1e]'
   }
 ];
 
