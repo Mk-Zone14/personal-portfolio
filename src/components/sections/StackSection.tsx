@@ -1,6 +1,6 @@
 
 
-const buildingWith = ['Python', 'C', 'Java', 'React', 'Vite', 'Tailwind', 'Git', 'GitHub', 'AI APIs'];
+const buildingWith = ['Python', 'C', 'Java', 'React', 'Vite', 'Tailwind', 'GitHub'];
 const currentlyLearning = ['Computer Science fundamentals', 'Data Structures & Algorithms', 'Machine Learning', 'Computer Vision', 'Systems', 'Quantitative Finance'];
 
 export const StackSection = () => {
