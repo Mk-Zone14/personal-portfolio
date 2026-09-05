@@ -26,11 +26,11 @@ export const ExperienceSection = () => {
           </div>
           <div>
             <ul className="space-y-6 font-sans text-base md:text-lg font-light text-foreground/80">
-              <li className="flex gap-4"><span className="text-accent">▹</span> Built AI/ML models and experimental architectures.</li>
-              <li className="flex gap-4"><span className="text-accent">▹</span> Participated in hackathons and SIH preparation.</li>
-              <li className="flex gap-4"><span className="text-accent">▹</span> Directed and constructed visual stories through filmmaking.</li>
-              <li className="flex gap-4"><span className="text-accent">▹</span> Analyzed datasets on Kaggle and deployed software projects.</li>
-              <li className="flex gap-4"><span className="text-accent">▹</span> Bridged biological concepts with computational solutions.</li>
+              <li className="flex gap-4"><span className="text-accent">▹</span> Placed 3rd in the Gemini Hackathon with Finora, a multi-agent AI CFO platform.</li>
+              <li className="flex gap-4"><span className="text-accent">▹</span> Built and deployed full-stack web tools including Nova (opportunity copilot) and SpendWise.</li>
+              <li className="flex gap-4"><span className="text-accent">▹</span> Developed predictive machine learning models on Kaggle, including credit card default analysis.</li>
+              <li className="flex gap-4"><span className="text-accent">▹</span> Explored autonomous visual mapping and hazard detection concepts for planetary rovers (SIH).</li>
+              <li className="flex gap-4"><span className="text-accent">▹</span> Directed and wrote college short films, bringing visual storytelling and narrative structure into software.</li>
             </ul>
           </div>
         </div>

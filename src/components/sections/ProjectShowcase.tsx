@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     title: 'FINORA',
     category: 'Featured Work / Hackathon',
-    description: 'Multi-Agent AI CFO. 3rd Place — Gemini Hackathon. Contribution: Product storytelling, presentation, and communication.',
+    description: 'Multi-agent AI CFO platform awarded 3rd Place at the Gemini Hackathon. Team contribution focused on product strategy, problem definition, and the hackathon presentation.',
     tech: ['Multi-Agent Systems', 'AI', 'Product Strategy'],
     link: 'https://vibeforge-cyan.vercel.app/',
     number: '01',
@@ -144,7 +144,7 @@ export const ProjectShowcase = () => {
                     </h3>
                   ) : project.compactTitle ? (
                     // Short-but-wide title (e.g. SPENDWISE): one step smaller to prevent clipping
-                    <h3 className="font-display font-bold text-4xl md:text-6xl lg:text-7xl uppercase tracking-tight leading-[0.9] mb-6 [font-synthesis:none]">
+                    <h3 className="font-display font-bold text-4xl md:text-6xl lg:text-5xl uppercase tracking-tight leading-[0.9] mb-6 [font-synthesis:none]">
                       {project.title}
                     </h3>
                   ) : (

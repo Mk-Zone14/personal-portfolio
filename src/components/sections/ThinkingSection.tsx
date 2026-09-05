@@ -8,7 +8,7 @@ const topics = [
   { id: 'math', title: 'MATHEMATICS', thought: 'The underlying API of the universe.' },
   { id: 'human', title: 'HUMAN BEHAVIOUR', thought: 'Irrational systems interacting with logical rules.' },
   { id: 'systems', title: 'SYSTEMS', thought: 'How small local interactions create massive global complexity.' },
-  { id: 'money', title: 'MONEY', thought: 'A shared delusion backed by cryptographic consensus or state violence.' }
+  { id: 'money', title: 'MONEY', thought: 'A system of trust, incentives, and resource allocation.' }
 ];
 
 export const ThinkingSection = () => {

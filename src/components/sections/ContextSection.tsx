@@ -51,7 +51,7 @@ export const ContextSection = () => {
         </div>
 
         <div className="mt-24 max-w-2xl text-lg md:text-2xl font-light leading-relaxed text-background/90 text-balance">
-          My path wasn't linear. It started with a fascination for organic systems, which eventually evolved into a deep curiosity about artificial systems, computation, and intelligence. The transition was driven by a desire to build, solve complex problems, and understand how intricate systems work at scale.
+          My path wasn't linear. It started with studying organic systems in biology and evolved into computer science and artificial intelligence. The constant thread has always been understanding how intricate systems function—whether biological or computational.
         </div>
       </div>
     </section>

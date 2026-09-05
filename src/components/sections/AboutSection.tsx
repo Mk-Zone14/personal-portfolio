@@ -9,10 +9,10 @@ export const AboutSection = () => {
         </div>
         <div className="md:col-span-8 space-y-8 font-sans text-xl md:text-3xl font-light text-foreground/90 text-balance leading-relaxed">
           <p>
-            I am a Computer Science & Engineering student specializing in AI/ML. My primary interest lies in building technically interesting systems and understanding how complex things work under the hood.
+            I am a Computer Science & Engineering student specializing in AI/ML. I care about how systems work under the hood—from mathematical models and agent architectures to the mechanics of reliable software.
           </p>
           <p className="text-foreground/60">
-            My background is a collision of biology, mathematics, filmmaking, programming, and endless experimentation. This unconventional path has shaped my approach to technology—treating code not just as logic, but as a medium for solving real problems and telling stories.
+            My thinking draws from a distinct combination of biology, mathematics, and filmmaking. Biology taught me how complex systems self-organize; mathematics gave me respect for structure; filmmaking gave me an instinct for visual hierarchy and rhythm. Programming and AI are where those threads come together into things people can actually use.
           </p>
         </div>
       </div>

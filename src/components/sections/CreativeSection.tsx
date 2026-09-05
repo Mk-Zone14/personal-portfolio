@@ -1,4 +1,4 @@
-
+import btsImage from '../../assets/filmmaking-bts.jpg';
 
 export const CreativeSection = () => {
   return (
@@ -27,7 +27,11 @@ export const CreativeSection = () => {
         </div>
 
         <div className="col-span-1 lg:col-span-7 relative h-[60vh] lg:h-full min-h-[400px] flex items-center justify-center bg-[#111] border border-muted/20 overflow-hidden group">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30 group-hover:opacity-40 transition-opacity duration-1000 grayscale"></div>
+          <img
+            src={btsImage}
+            alt="Behind-the-scenes view of a film set with a camera operator framing a shot of a subject indoors"
+            className="absolute inset-0 w-full h-full object-cover object-center opacity-30 group-hover:opacity-40 transition-opacity duration-1000 grayscale"
+          />
         </div>
       </div>
     </section>

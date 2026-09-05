@@ -1,7 +1,7 @@
 
 
 const buildingWith = ['Python', 'C', 'Java', 'React', 'Vite', 'Tailwind', 'GitHub'];
-const currentlyLearning = ['Computer Science fundamentals', 'Data Structures & Algorithms', 'Machine Learning', 'Computer Vision', 'Systems', 'Quantitative Finance'];
+const currentlyLearning = ['Data Structures & Algorithms', 'Machine Learning', 'Computer Vision', 'Systems', 'Quantitative Finance'];
 
 export const StackSection = () => {
   return (
