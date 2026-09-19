@@ -11,7 +11,7 @@ export const ExperienceSection = () => {
             <span className="font-sans text-xs tracking-widest uppercase text-muted">Academic SGPA</span>
           </div>
           <div className="flex flex-col">
-            <span className="font-display text-8xl md:text-[10vw] font-bold tracking-tighter leading-none mb-4">03</span>
+            <span className="font-display text-8xl md:text-[10vw] font-bold tracking-tighter leading-none mb-4">04</span>
             <span className="font-sans text-xs tracking-widest uppercase text-muted">Hackathon & Competitions</span>
           </div>
           <div className="flex flex-col">

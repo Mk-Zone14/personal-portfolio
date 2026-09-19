@@ -11,7 +11,7 @@ export const ContextSection = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const items = gsap.utils.toArray('.sequence-item');
-      
+
       gsap.from(items, {
         scrollTrigger: {
           trigger: sequenceRef.current,
@@ -36,7 +36,7 @@ export const ContextSection = () => {
         <h2 className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight mb-24">
           A Little Context.
         </h2>
-        
+
         <div ref={sequenceRef} className="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center font-sans text-xl md:text-3xl font-bold tracking-widest text-background/80 uppercase">
           <span className="sequence-item">Biology</span>
           <span className="sequence-item hidden md:inline">→</span>
@@ -51,7 +51,7 @@ export const ContextSection = () => {
         </div>
 
         <div className="mt-24 max-w-2xl text-lg md:text-2xl font-light leading-relaxed text-background/90 text-balance">
-          My path wasn't linear. It started with studying organic systems in biology and evolved into computer science and artificial intelligence. The constant thread has always been understanding how intricate systems function—whether biological or computational.
+          My path wasn't linear. It started with studying organic systems in biology, moved through visual storytelling and directing short films, and led into computer science and artificial intelligence. The constant thread has always been understanding how intricate systems function, whether biological, narrative, or computational.
         </div>
       </div>
     </section>
