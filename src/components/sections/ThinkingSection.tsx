@@ -1,3 +1,5 @@
+import { SectionSeam } from '../ui/SectionSeam';
+import { ScrollCharSpread } from '../ui/ScrollCharSpread';
 import { useState } from 'react';
 
 const topics = [
@@ -15,11 +17,13 @@ export const ThinkingSection = () => {
   const [activeTopic, setActiveTopic] = useState(topics[0]);
 
   return (
-    <section id="think" className="min-h-screen bg-foreground text-background pt-36 pb-24 md:pt-44 md:pb-32 px-6 flex flex-col justify-center">
+    <section id="think" className="relative min-h-screen bg-foreground text-background pt-36 pb-24 md:pt-44 md:pb-32 px-6 flex flex-col justify-center overflow-x-clip">
+      <SectionSeam from="dark" />
       <div className="max-w-[90vw] mx-auto w-full">
-        <h2 className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight mb-24 max-w-4xl">
-          Things I'm<br />Thinking About.
-        </h2>
+        <ScrollCharSpread
+          className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight mb-24 max-w-4xl"
+          text={"Things I'm\nThinking About."}
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8">
           <div className="flex flex-col gap-6">

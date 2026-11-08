@@ -1,8 +1,10 @@
+import { SectionSeam } from '../ui/SectionSeam';
 
 
 export const ContactSection = () => {
   return (
-    <section id="contact" className="min-h-screen bg-foreground text-background pt-36 pb-24 md:pt-44 md:pb-32 px-6 flex flex-col justify-between">
+    <section id="contact" className="relative min-h-screen bg-foreground text-background pt-36 pb-24 md:pt-44 md:pb-32 px-6 flex flex-col justify-between">
+      <SectionSeam from="dark" />
       <div className="max-w-[90vw] mx-auto w-full flex-grow flex flex-col justify-center">
         <h2 className="font-display font-bold text-[12vw] uppercase tracking-tighter leading-[0.8] mb-16 max-w-full text-balance hover:scale-[1.02] transition-transform duration-500 origin-left">
           LET'S BUILD<br/>SOMETHING<br/>INTERESTING.
