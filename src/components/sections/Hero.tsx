@@ -52,7 +52,7 @@ export const Hero = () => {
 
         <div className="hero-subtext mt-20 md:mt-28 w-full border-t border-muted/20 pt-8 md:pt-10 font-sans text-xs tracking-[0.2em] text-muted uppercase">
           <span className="hidden md:inline">
-            AI/ML <span className="mx-2">·</span> Software <span className="mx-2">·</span> Creative Technology
+            <span className="mr-2">·</span> AI/ML <span className="mx-2">·</span> Software <span className="mx-2">·</span> Creative Technology
           </span>
           <span className="md:hidden flex flex-col gap-3">
             <span>
