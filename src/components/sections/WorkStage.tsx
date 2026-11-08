@@ -15,7 +15,7 @@ const HOLD = 2.0; // enter-to-exit time for each case study
 
 /**
  * One continuous, scroll-scrubbed sequence for Selected Work:
- * a framed banner grows to full screen, a tilted 3D wall of the project
+ * a borderless tilted 3D wall of the project
  * screenshots unfurls, then the wall flattens away and each case study builds
  * in on the same stage (image, title, text, tech, links) before wiping to the next.
  * With prefers-reduced-motion it falls back to a plain stack of case studies.
@@ -42,7 +42,8 @@ export const WorkStage = ({ projects }: { projects: Project[] }) => {
         gsap.utils.toArray<T>(sel, root);
 
       const head = q('.ws-head')[0];
-      const banner = q('.ws-banner')[0];
+      const seam = q('.ws-seam')[0];
+      const wall = q('.ws-wall')[0];
       const grid = q('.ws-grid')[0];
       const cols = q('.ws-col');
       const panels = q('.ws-panel');
@@ -79,20 +80,14 @@ export const WorkStage = ({ projects }: { projects: Project[] }) => {
         },
       });
 
-      // 1. the framed banner (sitting right under the heading) grows to fill the screen,
-      //    and the heading lifts away with it
-      tl.fromTo(
-        banner,
-        { width: '90vw', height: () => window.innerHeight - 240, marginBottom: 24, borderRadius: 48, borderWidth: 4 },
-        { width: '100vw', height: () => window.innerHeight, marginBottom: 0, borderRadius: 0, borderWidth: 0, duration: 1 },
-        0
-      );
-      tl.to(head, { y: -70, autoAlpha: 0, duration: 0.7, ease: 'power1.in' }, 0);
+      // 1. the heading and the soft top edge lift away while the wall comes up out of the dark
+      tl.to([head, seam], { y: -70, autoAlpha: 0, duration: 0.8, ease: 'power1.in' }, 0);
+      tl.fromTo(wall, { autoAlpha: 0.35 }, { autoAlpha: 1, duration: 1 }, 0);
 
       // 2. the 3D wall unfurls and drifts
       tl.fromTo(
         grid,
-        { rotationY: -38, rotationX: 20, rotationZ: 12, z: -450 },
+        { rotationY: -42, rotationX: 22, rotationZ: 13, z: -600 },
         { rotationY: -8, rotationX: 4, rotationZ: 2, z: 0, duration: 2.6 },
         1
       );
@@ -111,8 +106,7 @@ export const WorkStage = ({ projects }: { projects: Project[] }) => {
         { rotationY: 0, rotationX: 0, rotationZ: 0, z: 250, duration: 1.2, ease: 'power2.in' },
         3.6
       );
-      tl.to(grid, { autoAlpha: 0, duration: 0.8, ease: 'power1.in' }, 3.9);
-      tl.to(banner, { autoAlpha: 0, duration: 0.8, ease: 'power1.in' }, 4.1);
+      tl.to(grid, { autoAlpha: 0, duration: 0.9, ease: 'power1.in' }, 3.9);
 
       // 4. case studies
       tl.to(dotWrap, { autoAlpha: 1, duration: 0.5 }, ENTER_FIRST);
@@ -191,15 +185,15 @@ export const WorkStage = ({ projects }: { projects: Project[] }) => {
         />
       </div>
 
-      {/* Layer 1: framed banner + 3D wall (animated mode only) */}
-      <div className="ws-wall absolute inset-0 flex items-end justify-center motion-reduce:hidden" aria-hidden="true">
-        <div
-          className="ws-banner relative bg-black overflow-hidden flex items-center justify-center max-w-[1920px] mx-auto border-solid border-foreground/15"
-          style={{ width: '90vw', height: 'calc(100vh - 15rem)', marginBottom: 24, borderRadius: 48, borderWidth: 4 }}
-        >
+      {/* soft light-to-dark edge so the section above melts into the stage */}
+      <div className="ws-seam absolute inset-x-0 top-0 h-24 z-[5] bg-gradient-to-b from-foreground to-transparent pointer-events-none motion-reduce:hidden" aria-hidden="true" />
+
+      {/* Layer 1: borderless 3D wall that fades into the page background (animated mode only) */}
+      <div className="ws-wall absolute inset-0 motion-reduce:hidden" aria-hidden="true">
+        <div className="ws-banner absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 flex justify-center items-center pointer-events-none" style={{ perspective: '1000px' }}>
-            <div className="absolute inset-0 z-20 shadow-[inset_0_100px_150px_-50px_rgba(0,0,0,1),inset_0_-100px_150px_-50px_rgba(0,0,0,1)]" />
-            <div className="absolute inset-0 z-20 shadow-[inset_150px_0_150px_-50px_rgba(0,0,0,1),inset_-150px_0_150px_-50px_rgba(0,0,0,1)]" />
+            <div className="absolute inset-0 z-20 shadow-[inset_0_160px_160px_-60px_#0a0a0a,inset_0_-160px_160px_-60px_#0a0a0a]" />
+            <div className="absolute inset-0 z-20 shadow-[inset_160px_0_160px_-60px_#0a0a0a,inset_-160px_0_160px_-60px_#0a0a0a]" />
             <div
               className="ws-grid flex gap-4 md:gap-6 justify-center items-center w-[120vw] h-[150vh] origin-center will-change-transform"
               style={{ transformStyle: 'preserve-3d' }}
