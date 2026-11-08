@@ -186,7 +186,7 @@ export const WorkStage = ({ projects }: { projects: Project[] }) => {
       </div>
 
       {/* soft light-to-dark edge so the section above melts into the stage */}
-      <div className="ws-seam absolute inset-x-0 top-0 h-24 z-[5] bg-gradient-to-b from-foreground to-transparent pointer-events-none motion-reduce:hidden" aria-hidden="true" />
+      <div className="ws-seam absolute inset-x-0 top-0 h-24 z-[5] bg-gradient-to-b from-foreground to-transparent pointer-events-none" aria-hidden="true" />
 
       {/* Layer 1: borderless 3D wall that fades into the page background (animated mode only) */}
       <div className="ws-wall absolute inset-0 motion-reduce:hidden" aria-hidden="true">

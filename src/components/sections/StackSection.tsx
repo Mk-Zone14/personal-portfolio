@@ -1,3 +1,4 @@
+import { SectionSeam } from '../ui/SectionSeam';
 
 
 const buildingWith = ['Python', 'C', 'Java', 'React', 'Vite', 'Tailwind', 'GitHub'];
@@ -5,7 +6,8 @@ const currentlyLearning = ['Data Structures & Algorithms', 'Machine Learning', '
 
 export const StackSection = () => {
   return (
-    <section className="pt-36 pb-24 md:pt-44 md:pb-32 bg-background text-foreground px-6">
+    <section className="relative pt-36 pb-24 md:pt-44 md:pb-32 bg-background text-foreground px-6">
+      <SectionSeam from="light" />
       <div className="max-w-[90vw] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-24">
         <div>
           <h3 className="font-sans text-xs tracking-widest uppercase text-muted mb-12 border-b border-muted/20 pb-4">
