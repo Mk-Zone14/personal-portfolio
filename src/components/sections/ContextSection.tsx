@@ -1,3 +1,4 @@
+import { SectionSeam } from '../ui/SectionSeam';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -33,7 +34,8 @@ export const ContextSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="context" className="min-h-screen pt-36 pb-24 md:pt-44 md:pb-32 px-6 bg-foreground text-background flex flex-col justify-center overflow-x-clip">
+    <section ref={sectionRef} id="context" className="relative min-h-screen pt-36 pb-24 md:pt-44 md:pb-32 px-6 bg-foreground text-background flex flex-col justify-center overflow-x-clip">
+      <SectionSeam from="dark" />
       <div className="max-w-[90vw] mx-auto w-full">
         <ScrollCharSpread
           className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight mb-24"

@@ -1,10 +1,12 @@
+import { SectionSeam } from '../ui/SectionSeam';
 import { ScrollReveal } from '../ui/ScrollReveal';
 import { ScrollCharSpread } from '../ui/ScrollCharSpread';
 import btsImage from '../../assets/filmmaking-bts.jpg';
 
 export const CreativeSection = () => {
   return (
-    <section className="min-h-screen bg-background text-foreground flex flex-col justify-center pt-36 pb-24 md:pt-44 md:pb-32 px-6 overflow-x-clip">
+    <section className="relative min-h-screen bg-background text-foreground flex flex-col justify-center pt-36 pb-24 md:pt-44 md:pb-32 px-6 overflow-x-clip">
+      <SectionSeam from="light" />
       <div className="max-w-[90vw] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-5 flex flex-col justify-between">
           <div>

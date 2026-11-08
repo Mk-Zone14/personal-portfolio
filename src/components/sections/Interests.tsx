@@ -1,3 +1,4 @@
+import { SectionSeam } from '../ui/SectionSeam';
 import { Fragment } from 'react';
 
 const interests = [
@@ -19,6 +20,7 @@ const COPIES = 8;
 export const Interests = () => {
   return (
     <section className="relative z-20 pt-44 pb-32 md:pt-52 md:pb-40 bg-foreground text-background overflow-hidden min-h-screen flex flex-col justify-center">
+      <SectionSeam from="dark" />
       <div className="px-6 mb-12 md:mb-16 max-w-[90vw] mx-auto w-full">
         <h2 className="font-sans text-sm tracking-[0.2em] uppercase font-bold text-background/60">
           Currently Obsessed With
