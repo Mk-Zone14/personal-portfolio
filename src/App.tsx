@@ -11,6 +11,8 @@ import { ExperienceSection } from './components/sections/ExperienceSection';
 import { AboutSection } from './components/sections/AboutSection';
 import { ContactSection } from './components/sections/ContactSection';
 import { Navbar } from './components/layout/Navbar';
+import { BackToTop } from './components/layout/BackToTop';
+import { setLenis } from './lib/scroll';
 
 function App() {
   useEffect(() => {
@@ -30,14 +32,17 @@ function App() {
     }
 
     requestAnimationFrame(raf);
+    setLenis(lenis);
 
     return () => {
+      setLenis(null);
       lenis.destroy();
     };
   }, []);
 
   return (
     <>
+      <div id="top" />
       <Navbar />
       <main>
         <Hero />
@@ -51,6 +56,7 @@ function App() {
         <AboutSection />
         <ContactSection />
       </main>
+      <BackToTop />
     </>
   );
 }
