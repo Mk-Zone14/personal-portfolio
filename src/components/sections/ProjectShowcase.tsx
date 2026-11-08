@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollCharSpread } from '../ui/ScrollCharSpread';
+import { UnfurlGallery } from '../ui/UnfurlGallery';
 
 import imgFinora from '../../assets/projects/finora.png';
 import imgNova from '../../assets/projects/nova.png';
@@ -117,6 +118,10 @@ export const ProjectShowcase = () => {
           text="Selected Work"
         />
       </div>
+
+      <UnfurlGallery
+        images={projects.map((p) => ({ src: p.image, alt: p.imageAlt, position: p.imagePosition }))}
+      />
 
       <div className="relative">
         {projects.map((project, index) => (
