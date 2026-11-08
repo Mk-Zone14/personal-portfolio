@@ -39,7 +39,7 @@ export const Hero = () => {
         </h1>
 
         <div className="flex flex-col-reverse gap-8 md:flex-row md:items-end md:justify-between">
-          <p className="hero-subtext font-sans text-base md:text-lg text-foreground/80 max-w-md font-light leading-relaxed md:pb-4">
+          <p className="hero-subtext font-sans text-base md:text-lg text-foreground/80 max-w-md font-light leading-relaxed md:-mb-[4.5rem]">
             I build systems, experiments and visual experiences at the intersection of technology and curiosity.
           </p>
           <span
