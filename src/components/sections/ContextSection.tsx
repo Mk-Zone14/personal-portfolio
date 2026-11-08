@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollReveal } from '../ui/ScrollReveal';
+import { ScrollCharSpread } from '../ui/ScrollCharSpread';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,11 +33,12 @@ export const ContextSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="context" className="min-h-screen pt-36 pb-24 md:pt-44 md:pb-32 px-6 bg-foreground text-background flex flex-col justify-center">
+    <section ref={sectionRef} id="context" className="min-h-screen pt-36 pb-24 md:pt-44 md:pb-32 px-6 bg-foreground text-background flex flex-col justify-center overflow-x-clip">
       <div className="max-w-[90vw] mx-auto w-full">
-        <h2 className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight mb-24">
-          A Little Context.
-        </h2>
+        <ScrollCharSpread
+          className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight mb-24"
+          text="A Little Context."
+        />
 
         <div ref={sequenceRef} className="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center font-sans text-xl md:text-3xl font-bold tracking-widest text-background/80 uppercase">
           <span className="sequence-item">Biology</span>
