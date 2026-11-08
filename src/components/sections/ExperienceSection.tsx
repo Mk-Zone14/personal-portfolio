@@ -7,8 +7,8 @@ export const ExperienceSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-24">
           <div className="flex flex-col">
-            <span className="font-display text-8xl md:text-[10vw] font-bold tracking-tighter leading-none mb-4">9.1<span className="text-accent">+</span></span>
-            <span className="font-sans text-xs tracking-widest uppercase text-muted">Academic SGPA</span>
+            <span className="font-display text-8xl md:text-[10vw] font-bold tracking-tighter leading-none mb-4">8.83</span>
+            <span className="font-sans text-xs tracking-widest uppercase text-muted">Cumulative CGPA / 10</span>
           </div>
           <div className="flex flex-col">
             <span className="font-display text-8xl md:text-[10vw] font-bold tracking-tighter leading-none mb-4">04</span>
