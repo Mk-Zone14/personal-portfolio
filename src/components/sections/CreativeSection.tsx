@@ -1,15 +1,17 @@
 import { ScrollReveal } from '../ui/ScrollReveal';
+import { ScrollCharSpread } from '../ui/ScrollCharSpread';
 import btsImage from '../../assets/filmmaking-bts.jpg';
 
 export const CreativeSection = () => {
   return (
-    <section className="min-h-screen bg-background text-foreground flex flex-col justify-center pt-36 pb-24 md:pt-44 md:pb-32 px-6">
+    <section className="min-h-screen bg-background text-foreground flex flex-col justify-center pt-36 pb-24 md:pt-44 md:pb-32 px-6 overflow-x-clip">
       <div className="max-w-[90vw] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-5 flex flex-col justify-between">
           <div>
-            <h2 className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight leading-none mb-8">
-              Not Everything<br />Is Code.
-            </h2>
+            <ScrollCharSpread
+              className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight leading-none mb-8"
+              text={"Not Everything\nIs Code."}
+            />
             <div className="font-sans text-xs tracking-widest uppercase text-muted mb-12">
               Visual Storytelling
             </div>

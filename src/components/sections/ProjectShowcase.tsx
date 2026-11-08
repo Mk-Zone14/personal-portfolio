@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollCharSpread } from '../ui/ScrollCharSpread';
 
 import imgFinora from '../../assets/projects/finora.png';
 import imgNova from '../../assets/projects/nova.png';
@@ -109,11 +110,12 @@ export const ProjectShowcase = () => {
   }, []);
 
   return (
-    <section ref={containerRef} id="work" className="relative w-full bg-background text-foreground z-10">
+    <section ref={containerRef} id="work" className="relative w-full bg-background text-foreground z-10 overflow-x-clip">
       <div className="pt-36 pb-16 px-6">
-        <h2 className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight max-w-[90vw] mx-auto mb-16">
-          Selected Work
-        </h2>
+        <ScrollCharSpread
+          className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight max-w-[90vw] mx-auto mb-16"
+          text="Selected Work"
+        />
       </div>
 
       <div className="relative">
@@ -139,18 +141,12 @@ export const ProjectShowcase = () => {
                   */}
                   {project.longTitle ? (
                     // Multi-word long title: wrap-friendly with smaller size
-                    <h3 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight leading-[1.05] mb-6 [font-synthesis:none] break-words hyphens-auto">
-                      {project.title}
-                    </h3>
+                    <ScrollCharSpread as="h3" className="font-display font-bold text-3xl sm:text-4xl md:text-5xl uppercase tracking-tight leading-[1.05] mb-6 [font-synthesis:none] break-words hyphens-auto" text={project.title} />
                   ) : project.compactTitle ? (
                     // Short-but-wide title (e.g. SPENDWISE): one step smaller to prevent clipping
-                    <h3 className="font-display font-bold text-4xl md:text-6xl lg:text-5xl uppercase tracking-tight leading-[0.9] mb-6 [font-synthesis:none]">
-                      {project.title}
-                    </h3>
+                    <ScrollCharSpread as="h3" className="font-display font-bold text-4xl md:text-6xl lg:text-5xl uppercase tracking-tight leading-[0.9] mb-6 [font-synthesis:none]" text={project.title} />
                   ) : (
-                    <h3 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl uppercase tracking-tight leading-[0.9] mb-6 [font-synthesis:none]">
-                      {project.title}
-                    </h3>
+                    <ScrollCharSpread as="h3" className="font-display font-bold text-5xl md:text-7xl lg:text-8xl uppercase tracking-tight leading-[0.9] mb-6 [font-synthesis:none]" text={project.title} />
                   )}
 
                   <div className="font-sans text-sm tracking-widest uppercase text-accent mb-8">

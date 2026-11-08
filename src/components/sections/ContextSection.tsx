@@ -41,16 +41,16 @@ export const ContextSection = () => {
         />
 
         <div ref={sequenceRef} className="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center font-sans text-xl md:text-3xl font-bold tracking-widest text-background/80 uppercase">
-          <span className="sequence-item">Biology</span>
+          <ScrollCharSpread as="span" strength={0.3} className="sequence-item" text="Biology" />
           <span className="sequence-item hidden md:inline">→</span>
           <span className="sequence-item md:hidden">↓</span>
-          <span className="sequence-item">Computer Science</span>
+          <ScrollCharSpread as="span" strength={0.3} className="sequence-item" text="Computer Science" />
           <span className="sequence-item hidden md:inline">→</span>
           <span className="sequence-item md:hidden">↓</span>
-          <span className="sequence-item text-background">AI / ML</span>
+          <ScrollCharSpread as="span" strength={0.3} className="sequence-item text-background" text="AI / ML" />
           <span className="sequence-item hidden md:inline">→</span>
           <span className="sequence-item md:hidden">↓</span>
-          <span className="sequence-item animate-pulse">???</span>
+          <ScrollCharSpread as="span" strength={0.3} className="sequence-item animate-pulse" text="???" />
         </div>
 
         <ScrollReveal className="mt-24 max-w-2xl text-lg md:text-2xl font-light leading-relaxed text-background/90 text-balance" text="My path wasn't linear. It started with studying organic systems in biology, moved through visual storytelling and directing short films, and led into computer science and artificial intelligence. The constant thread has always been understanding how intricate systems function, whether biological, narrative, or computational." />

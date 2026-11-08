@@ -5,8 +5,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 type Props = {
-  text: string;
+  text: string; // use "\n" for a line break
   className?: string;
+  as?: 'h2' | 'h3' | 'span';
+  /** Scales how far letters start from their place (1 = headline size) */
+  strength?: number;
 };
 
 /**
@@ -15,8 +18,8 @@ type Props = {
  * Same effect as the text-scroll-animation component, built on the GSAP and
  * Lenis already in the project instead of adding framer-motion.
  */
-export const ScrollCharSpread = ({ text, className }: Props) => {
-  const ref = useRef<HTMLHeadingElement>(null);
+export const ScrollCharSpread = ({ text, className, as: Tag = 'h2', strength = 1 }: Props) => {
+  const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const el = ref.current;
@@ -30,7 +33,7 @@ export const ScrollCharSpread = ({ text, className }: Props) => {
       },
       (ctx) => {
         const { wide } = ctx.conditions as { wide: boolean };
-        const step = wide ? 50 : 14;
+        const step = (wide ? 50 : 14) * strength;
         const chars = Array.from(el.querySelectorAll<HTMLElement>('.spread-char'));
         const center = Math.floor(chars.length / 2);
 
@@ -56,27 +59,34 @@ export const ScrollCharSpread = ({ text, className }: Props) => {
     );
 
     return () => mm.revert();
-  }, []);
+  }, [strength]);
+
+  const lines = text.split('\n');
 
   return (
-    <h2
-      ref={ref}
+    <Tag
+      ref={ref as never}
       className={className}
-      aria-label={text}
       style={{ perspective: '500px' }}
     >
+      <span className="sr-only">{text.replace('\n', ' ')}</span>
       <span aria-hidden="true">
-        {text.split(' ').map((word, wi, words) => (
-          <span key={wi} className="inline-block whitespace-nowrap">
-            {word.split('').map((ch, ci) => (
-              <span key={ci} className="spread-char inline-block">
-                {ch}
+        {lines.map((line, li) => (
+          <span key={li}>
+            {li > 0 && <br />}
+            {line.split(' ').map((word, wi, words) => (
+              <span key={wi} className="inline-block whitespace-nowrap">
+                {word.split('').map((ch, ci) => (
+                  <span key={ci} className="spread-char inline-block">
+                    {ch}
+                  </span>
+                ))}
+                {wi < words.length - 1 ? '\u00A0' : ''}
               </span>
             ))}
-            {wi < words.length - 1 ? ' ' : ''}
           </span>
         ))}
       </span>
-    </h2>
+    </Tag>
   );
 };
