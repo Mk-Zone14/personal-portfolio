@@ -1,6 +1,7 @@
 import { useLayoutEffect, useMemo, useRef, type CSSProperties } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollCharSpread } from '../ui/ScrollCharSpread';
 import type { Project } from './projects-data';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -40,6 +41,7 @@ export const WorkStage = ({ projects }: { projects: Project[] }) => {
       const q = <T extends Element = HTMLElement>(sel: string, root: ParentNode = stage) =>
         gsap.utils.toArray<T>(sel, root);
 
+      const head = q('.ws-head')[0];
       const banner = q('.ws-banner')[0];
       const grid = q('.ws-grid')[0];
       const cols = q('.ws-col');
@@ -77,18 +79,20 @@ export const WorkStage = ({ projects }: { projects: Project[] }) => {
         },
       });
 
-      // 1. framed banner grows to fill the screen
+      // 1. the framed banner (sitting right under the heading) grows to fill the screen,
+      //    and the heading lifts away with it
       tl.fromTo(
         banner,
-        { width: '90vw', height: '80vh', borderRadius: 48, borderWidth: 4 },
-        { width: '100vw', height: '100vh', borderRadius: 0, borderWidth: 0, duration: 1 },
+        { width: '90vw', height: () => window.innerHeight - 240, marginBottom: 24, borderRadius: 48, borderWidth: 4 },
+        { width: '100vw', height: () => window.innerHeight, marginBottom: 0, borderRadius: 0, borderWidth: 0, duration: 1 },
         0
       );
+      tl.to(head, { y: -70, autoAlpha: 0, duration: 0.7, ease: 'power1.in' }, 0);
 
       // 2. the 3D wall unfurls and drifts
       tl.fromTo(
         grid,
-        { rotationY: -45, rotationX: 25, rotationZ: 15, z: -800 },
+        { rotationY: -38, rotationX: 20, rotationZ: 12, z: -450 },
         { rotationY: -8, rotationX: 4, rotationZ: 2, z: 0, duration: 2.6 },
         1
       );
@@ -179,11 +183,19 @@ export const WorkStage = ({ projects }: { projects: Project[] }) => {
       ref={stageRef}
       className="relative w-full overflow-hidden bg-background motion-safe:h-screen"
     >
+      {/* Heading lives on the stage, so the title and the wall are one scene */}
+      <div className="ws-head relative z-10 px-6 pt-28 md:pt-32 motion-reduce:pt-36 motion-reduce:pb-16">
+        <ScrollCharSpread
+          className="font-display font-medium text-4xl md:text-7xl uppercase tracking-tight max-w-[90vw] mx-auto"
+          text="Selected Work"
+        />
+      </div>
+
       {/* Layer 1: framed banner + 3D wall (animated mode only) */}
-      <div className="ws-wall absolute inset-0 flex items-center justify-center motion-reduce:hidden" aria-hidden="true">
+      <div className="ws-wall absolute inset-0 flex items-end justify-center motion-reduce:hidden" aria-hidden="true">
         <div
           className="ws-banner relative bg-black overflow-hidden flex items-center justify-center max-w-[1920px] mx-auto border-solid border-foreground/15"
-          style={{ width: '90vw', height: '80vh', borderRadius: 48, borderWidth: 4 }}
+          style={{ width: '90vw', height: 'calc(100vh - 15rem)', marginBottom: 24, borderRadius: 48, borderWidth: 4 }}
         >
           <div className="absolute inset-0 flex justify-center items-center pointer-events-none" style={{ perspective: '1000px' }}>
             <div className="absolute inset-0 z-20 shadow-[inset_0_100px_150px_-50px_rgba(0,0,0,1),inset_0_-100px_150px_-50px_rgba(0,0,0,1)]" />
