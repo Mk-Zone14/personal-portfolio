@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollReveal } from '../ui/ScrollReveal';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,9 +51,7 @@ export const ContextSection = () => {
           <span className="sequence-item animate-pulse">???</span>
         </div>
 
-        <div className="mt-24 max-w-2xl text-lg md:text-2xl font-light leading-relaxed text-background/90 text-balance">
-          My path wasn't linear. It started with studying organic systems in biology, moved through visual storytelling and directing short films, and led into computer science and artificial intelligence. The constant thread has always been understanding how intricate systems function, whether biological, narrative, or computational.
-        </div>
+        <ScrollReveal className="mt-24 max-w-2xl text-lg md:text-2xl font-light leading-relaxed text-background/90 text-balance" text="My path wasn't linear. It started with studying organic systems in biology, moved through visual storytelling and directing short films, and led into computer science and artificial intelligence. The constant thread has always been understanding how intricate systems function, whether biological, narrative, or computational." />
       </div>
     </section>
   );

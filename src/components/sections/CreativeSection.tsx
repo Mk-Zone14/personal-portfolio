@@ -1,3 +1,4 @@
+import { ScrollReveal } from '../ui/ScrollReveal';
 import btsImage from '../../assets/filmmaking-bts.jpg';
 
 export const CreativeSection = () => {
@@ -15,9 +16,7 @@ export const CreativeSection = () => {
           </div>
 
           <div className="space-y-6 max-w-sm">
-            <p className="font-sans text-base md:text-lg text-foreground/80 font-light leading-relaxed">
-              Before algorithms, there were frames. My experience in college filmmaking and directing taught me how to construct narratives, manipulate pacing, and control visual hierarchy.
-            </p>
+            <ScrollReveal className="font-sans text-base md:text-lg text-foreground/80 font-light leading-relaxed" text="Before algorithms, there were frames. My experience in college filmmaking and directing taught me how to construct narratives, manipulate pacing, and control visual hierarchy." />
             <div className="flex flex-col gap-2 font-display text-sm md:text-xl uppercase tracking-widest text-accent mt-8">
               <span>Director</span>
               <span>Writer</span>
