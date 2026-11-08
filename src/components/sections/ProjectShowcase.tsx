@@ -34,7 +34,7 @@ const projects: Project[] = [
   {
     title: 'FINORA',
     category: 'Featured Work / Hackathon',
-    description: 'Multi-agent AI CFO platform awarded 3rd Place at the Gemini Hackathon. Team contribution focused on product strategy, problem definition, and the hackathon presentation.',
+    description: 'Multi-agent AI CFO platform awarded 2nd Runner-Up at the 24-hour Build with Gemma, GDG TIU Buildathon. Team contribution focused on product strategy, problem definition, and the hackathon presentation.',
     tech: ['Multi-Agent Systems', 'AI', 'Product Strategy'],
     link: 'https://vibeforge-cyan.vercel.app/',
     number: '01',
