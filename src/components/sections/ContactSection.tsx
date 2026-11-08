@@ -18,6 +18,9 @@ export const ContactSection = () => {
           <a href="https://www.linkedin.com/in/medhashree-kallol-2878a2334/" target="_blank" rel="noreferrer" className="hover:text-background/50 transition-colors border-b border-transparent hover:border-background/50 pb-1 w-fit">
             LinkedIn
           </a>
+          <a href="/Medhashree_Kallol_Resume.pdf" target="_blank" rel="noreferrer" className="hover:text-background/50 transition-colors border-b border-transparent hover:border-background/50 pb-1 w-fit">
+            Resume
+          </a>
         </div>
       </div>
 
